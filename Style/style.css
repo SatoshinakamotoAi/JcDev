@@ -1,0 +1,710 @@
+/* ---------------- Typography & Readability ---------------- */
+body {
+  font-family: "Poppins", Arial, sans-serif;  /* Mas modern at clean */
+  font-size: 16px;                            /* Standard size */
+  line-height: 1.6;                           /* Para hindi dikit */
+  letter-spacing: 0.3px;                      /* Mas airy */
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 1rem;        /* mas readable */
+  line-height: 1.6;
+}
+
+.contact-info h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* About & Skills Content */
+.about-me, .skills {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Skills Chips */
+.skill {
+  font-size: 0.95rem;     /* balance sa chip size */
+  font-weight: 600;
+  padding: 10px 18px;
+}
+
+/* ---------------- Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- Body ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------------- Dark Mode ---------------- */
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+body.dark-mode .navbar {
+  background: #1c1c1c;
+}
+
+body.dark-mode .nav-links li a {
+  color: #fff;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #000000, #4A4A4A);
+}
+
+body.dark-mode .btn {
+  background: #FFB300;
+  color: #000;
+}
+
+body.dark-mode #typing {
+  color: #fff; /* Text readable sa dark mode */
+}
+
+/* ---------------- Light Mode ---------------- */
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #000;
+}
+
+body.light-mode .navbar {
+  background: #eaeaea;
+}
+
+body.light-mode .nav-links li a {
+  color: #000;
+}
+
+body.light-mode .hero {
+  background: linear-gradient(to right, #ffffff, #dcdcdc);
+}
+
+body.light-mode .btn {
+  background: #4A4A4A;
+  color: #fff;
+}
+
+body.light-mode #typing {
+  color: #000; /* Text readable sa light mode */
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFB300;
+}
+
+/* Navbar links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  align-items: center;
+}
+
+/* Navbar link styles */
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+/* Hover Box Animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #FFB300;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #FFB300;
+}
+
+/* ---------------- Switch Button ---------------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+.checkbox {
+  display: none;
+}
+
+.slider {
+  width: 60px;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 4px solid transparent;
+  transition: .3s;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-30px);
+  border-radius: 20px;
+  transition: .3s;
+  box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(30px);
+}
+
+.checkbox:checked ~ .slider {
+  background-color: #2196F3;
+}
+
+/* ---------------- Burger Menu ---------------- */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: 1rem;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  transition: 0.4s;
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  text-align: center;   /* center text */
+  color: #fff; /* default white text */
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2; /* nasa ibabaw ng .container */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffb300;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffb300;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #e09d00;
+  transform: scale(1.05);
+}
+
+/* Transparent container */
+.transparent-box {
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);   /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  display: inline-block;
+}
+
+/* Typing text */
+#typing {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffb300;  /* yellow text */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffb300; /* yellow cursor */
+  animation: blink 0.7s infinite;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #ffb300; }
+  100% { border-color: transparent; }
+}
+
+
+/* ✅ RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .explore-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) { /* tablets */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .explore-btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) { /* phones */
+  .hero {
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .explore-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    background: inherit;
+  }
+
+  .nav-links.active {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: 2px solid #FFB300;
+  background-color: #FFB300;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+body.light-mode .explore-btn {
+  background-color: #FFB300;
+  color: #000;
+}
+
+.explore-btn:hover {
+  background-color: #cc8b00;
+  color: #fff;
+}
+
+/* ---------------- Semd Massages ---------------- */
+/* From Uiverse.io by 00Kubi */ 
+.button {
+  --primary: #4f46e5;
+  --neutral-1: #ffffff;
+  --neutral-2: #f3f4f6;
+  --radius: 16px;
+
+  cursor: pointer;
+  border-radius: var(--radius);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-width: 220px;
+  padding: 22px;
+  height: 72px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-style: normal;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 2px 2px rgba(255, 255, 255, 0.4),
+    0 18px 32px rgba(0, 0, 0, 0.15),
+    0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+  transform: scale(1);
+  box-shadow:
+    0 0 1px 2px rgba(255, 255, 255, 0.3),
+    0 10px 3px -3px rgba(0, 0, 0, 0.2);
+}
+.button:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  border: 2.5px solid transparent;
+  background:
+    linear-gradient(var(--neutral-1), var(--neutral-2)) padding-box,
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45))
+      border-box;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+.button:hover::after {
+  transform: scale(1.05, 1.1);
+  box-shadow: inset 0 -1px 3px 0 rgba(255, 255, 255, 1);
+}
+.button::before {
+  content: "";
+  inset: 7px 6px 6px 6px;
+  position: absolute;
+  background: linear-gradient(to top, var(--neutral-1), var(--neutral-2));
+  border-radius: 30px;
+  filter: blur(0.5px);
+  z-index: 2;
+}
+.state p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.state .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(1.25);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.state .icon svg {
+  overflow: visible;
+}
+
+/* Outline */
+.outline {
+  position: absolute;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  inset: -2px -3.5px;
+}
+.outline::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 180deg,
+    transparent 60%,
+    var(--primary) 85%,
+    transparent 100%
+  );
+  animation: spin 2.5s linear infinite;
+  animation-play-state: paused;
+  opacity: 0.7;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.button:hover .outline {
+  opacity: 1;
+}
+.button:hover .outline::before {
+  animation-play-state: running;
+}
+
+/* Letters */
+.state p span {
+  display: block;
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+}
+.button:hover p span {
+  opacity: 1;
+  animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+}
+.button:focus p span {
+  opacity: 1;
+  animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
+}
+@keyframes wave {
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px) translateX(0) rotate(0);
+    color: var(--primary);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(5px) rotate(-90deg);
+    color: var(--primary);
+    filter: blur(5px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(4px) translateX(0) rotate(0);
+    filter: blur(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) translateX(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) rotate(0);
+  }
+}
+@keyframes disapear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(5px) translateY(20px);
+    color: var(--primary);
+    filter: blur(5px);
+  }
+}
+
+/* Plane */
+.state--default .icon svg {
+  animation: land 0.6s ease forwards;
+}
+.button:hover .state--default .icon {
+  transform: rotate(45deg) scale(1.25);
+}
+.button:focus .state--default svg {
+  animation: takeOff 0.8s linear forwards;
+}
+.button:focus .state--default .icon {
+  transform: rotate(0) scale(1.25);
+}
+@keyframes takeOff {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(80px) rotate(45deg) scale(2.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(180px) rotate(45deg) scale(0);
+  }
+}
+@keyframes land {
+  0% {
+    transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
+    opacity: 0;
+    filter: blur(3px);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Contrail */
+.state--default .icon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 0;
+  left: -5px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+.button:focus .state--default .icon:before {
+  animation: contrail 0.8s linear forwards;
+}
+@keyframes contrail {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  8% {
+    width: 15px;
+  }
+  60% {
+    opacity: 0.7;
+    width: 80px;
+  }
+  100% {
+    opacity: 0;
+    width: 160px;
+  }
+}
+
+/* States */
+.state {
+  padding-left: 29px;
+  z-index: 2;
+  display: flex;
+  position: relative;
+}
+.state--default span:nth-child(4) {
+  margin-right: 5px;
+}
+.state--sent {
+  display: none;
+}
+.state--sent svg {
+  transform: scale(1.25);
+  margin-right: 8px;
+}
+.button:focus .state--default {
+  position: absolute;
+}
+.button:focus .state--sent {
+  display: flex;
+}
+.button:focus .state--sent span {
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
+}
+.button:focus .state--sent .icon svg {
+  opacity: 0;
+  animation: appear 1.2s ease forwards 0.8s;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(4) rotate(-40deg);
+    color: var(--primary);
+    filter: blur(4px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(0.6);
+    filter: blur(1px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

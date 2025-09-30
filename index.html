@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jc Developer</title>
+  <link rel="icon" type="image/png" href="photo/JcDev.png" /> <!-- Favicon -->
+  <link rel="stylesheet" href="Style/style.css">
+  <link rel="stylesheet" href="Style/container.css"> <!-- Bacgournd -->
+  <link rel="stylesheet" href="Style/About.css">
+  <link rel="stylesheet" href="Style/Portfolio.css">
+  <link rel="stylesheet" href="Style/Contact.css">
+</head>
+<body class="dark-mode">
+    
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <div class="logo"></div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark/Light Switch -->
+      <label class="switch">
+        <input type="checkbox" class="checkbox" id="modeSwitch">
+        <div class="slider"></div>
+      </label>
+
+      <!-- Burger Menu (Mobile) -->
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+    <!-- Full background container -->
+    <div class="container"></div>
+
+    <!-- Hero content sa ibabaw -->
+    <div class="hero-content">
+        <h1 id="typing"></h1>
+        <p>Welcome! This is my portfolio where I showcase my work, skills, and passion for development.</p>
+        <button class="explore-btn" id="exploreBtn">Explore My Work</button>
+    </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="left-side">
+        <!-- Profile Card -->
+        <div class="card">
+        <b></b>
+        <!-- Profile Picture -->
+        <img src="photo/JCLG.jpg" alt="Profile" class="profile-pic">
+
+        <!-- Content -->
+        <div class="content">
+            <p class="title">Geronimo, John Carlo L.<br><span>Developer</span></p>
+            <ul class="sci">
+                <!-- GitHub -->
+                <li>
+                    <a href="https://github.com/SatoshinakamotoAi">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.2.3-5.5-1.3-5.5-3.6 0-2 2.3-3.6 5.2-3.6 2.9-.3 5.5 1.3 5.5 3.6zm-31.1-4.5c-.7 2 1.3 4.2 4.2 4.5 2.6 1 5.5 0 6.2-2s-1.3-4.2-4.2-4.5c-2.9-.7-5.2.3-6.2 2zm44.2-1.7c-2.9.7-4.9 2.6-4.2 4.9.3 2.3 2.9 3.6 5.9 2.9 2.9-.7 4.9-2.6 4.2-4.9-.6-2.2-3.2-3.5-5.9-2.9zM244 8C109 8 0 117 0 252c0 108 69.8 199.2 166.4 231.6 12.1 2.2 16.6-5.2 16.6-11.6v-40.7c-67.7 14.8-82.1-28.4-82.1-28.4-11-28-26.8-35.6-26.8-35.6-21.9-15 1.6-14.7 1.6-14.7 24.2 1.6 36.9 24.9 36.9 24.9 21.6 36.9 56.7 26.2 70.6 20 .3-15.8 8.5-26.2 15.5-32.2-54-6.2-111-26.8-111-119.4 0-26.5 9.5-48.4 24.9-65.5-2.3-6.2-11-31.1 2.3-64.8 0 0 20.6-6.5 67.4 24.9 19.7-5.5 40.7-8.1 61.7-8.1s42 2.6 61.7 8.1c46.8-31.4 67.4-24.9 67.4-24.9 13.3 33.7 4.6 58.6 2.3 64.8 15.5 17.1 24.9 39 24.9 65.5 0 92.9-57.1 113.2-111 119.4 8.5 7.4 16.2 21.9 16.2 44.5v65.9c0 6.5 4.6 13.8 16.6 11.6C426.2 451.2 496 360 496 252 496 117 383 8 244 8z"/></svg>
+                    </a>
+                </li>
+                <!-- LinkedIn -->
+                <li>
+                    <a href="https://www.linkedin.com/in/jc-luriz-geronimo-138b4a30b">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zm-46.5-341a53.79 53.79 0 1 1 0-107.6 53.79 53.79 0 0 1 0 107.6zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+    <div class="right-side">
+      <div class="desc-box">
+        <h2>About Me</h2>
+        <p>
+          I'm a freelance web and mobile developer with a strong passion for creating modern digital solutions that 
+          empower businesses and individuals. I specialize in building eCommerce websites tailored for small businesses, 
+          developing Point of Sale (POS) systems with touchscreen monitors, and crafting smart IoT projects that bring 
+          automation to everyday life. Aside from software, I also design and sell my own devices, such as automated home 
+          gardening systems, giving plant lovers and entrepreneurs a reliable tool for effortless plant care. With every 
+          project, I aim to combine innovation, functionality, and clean design to deliver solutions that are not only 
+          reliable but also future-ready. My mission is to help businesses grow through technology while providing 
+          intelligent systems that solve real-world problems in smart and practical ways.
+        </p>
+      </div>
+      <div class="skills-box">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">PHP</span>
+          <span class="skill">MySQL</span>
+          <span class="skill">Java</span>
+          <span class="skill">Python</span>
+          <span class="skill">C++</span>
+          <span class="skill">Arduino</span>
+          <span class="skill">IoT</span>
+          <span class="skill">Website Development</span>
+          <span class="skill">Mobile Application</span>
+          <span class="skill">CSS NCII</span>
+          <span class="skill">CCNA</span>
+          <span class="skill">Java NCIII</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Portfolio</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+        <img src="Photo/image.png" alt="Project 1">
+        <div class="project-desc">
+            <h3>EcoGrow - Smart Garden Control</h3>
+            <p>
+            EcoGrow is a smart home gardening web app 
+            with real-time device monitoring and control. 
+            Featuring secure login, a dynamic dashboard, 
+            and full interaction via PHP and API integration, 
+            it's built with HTML, CSS, and JavaScript for a 
+            seamless, responsive experience.
+            </p>
+        </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project reverse">
+        <img src="Photo/Arduino.png" alt="Project 2">
+        <div class="project-desc">
+            <h3>AutoPlant - Smart IoT Garden</h3>
+            <p>
+            Discover the future of home gardening with AutoPlant. This Arduino-powered IoT system monitors soil 
+            moisture in real-time and automatically waters plants when needed, making plant care effortless. With a 
+            sleek web dashboard, you can track, control, and nurture your plants anytime. Perfect for small spaces and 
+            hydroponics, AutoPlant is also available as a smart home gardening device for plant lovers—fully automatic, 
+            no need for constant supervision. Experience smart gardening like never before, where technology meets nature.
+            </p>
+            <p>Interested in getting one? Kindly message me through the Contact section of my portfolio.</p>
+        </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+        <img src="Photo/Game.png" alt="Project 3">
+        <div class="project-desc">
+            <h3>Esikai - Anime-Inspired Dungeon Adventure</h3>
+            <p>
+            Esikai is an anime-inspired dungeon adventure where 
+            heroes explore perilous dungeons, battle powerful monsters, 
+            and uncover hidden treasures. Strategize with unique hero abilities, 
+            assemble your team, and rise to legendary status. With immersive visuals, 
+            dynamic gameplay, and endless challenges, every dungeon is a new adventure 
+            waiting to be conquered.
+            </p>
+        </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project reverse">
+        <img src="Photo/Suvas.png" alt="Project 4">
+        <div class="project-desc">
+            <h3>Pos Counter - Real-Time Customer Tracking for Small Businesses</h3>
+            <p>
+            Pos Counter helps small businesses like coffee shops, restaurants, and resorts track 
+            customer visits in real-time. Implemented at Suvas Place in Antipolo, it provides instant 
+            insights into foot traffic, helping owners optimize service and improve operations effortlessly.
+            </p>
+        </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project reverse">
+        <img src="Photo/WILD&FRESH.png" alt="Project 4">
+        <div class="project-desc">
+            <h3>WILD & FRESH - Premium Perfume Brand Website</h3>
+            <p>
+            WILD & FRESH is an eCommerce website I developed for a premium perfume brand in the Philippines. It 
+            features a sleek design with smooth functionality, allowing customers to browse collections, add to cart, 
+            and checkout with ease—capturing both the freshness and elegance of the brand.
+            </p>
+        </div>
+        </div>
+        
+        <!-- Proect 6 (Video Left + Description Right) -->
+    <div class="project">
+        <video controls>
+        <source src="Video/Ardtuino.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <div class="project-desc">
+        <h3>AutoPlant - Smart IoT Gardening System Demo</h3>
+        <p>
+            Watch AutoPlant in action! This demo showcases real-time soil monitoring and automatic watering 
+            through a sleek web dashboard—perfect for plant lovers and hydroponics entrepreneurs. With effortless 
+            plant care, smart management, and seamless control, AutoPlant makes gardening easier than ever. This 
+            device is also available for purchase, designed and built by me—fully automatic, reliable, and ideal for 
+            anyone who wants healthy plants without the hassle of daily watering. Kindly message me through the Contact 
+            section of my portfolio if you're interested.
+          </p>
+        </div>
+    </div>
+
+    <!-- Project 7 (Description Left + Video Right) -->
+    <div class="project reverse">
+        <video controls>
+        <source src="Video/0927.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <div class="project-desc">
+        <h3>Esikai - Anime-Inspired Dungeon Adventure Demo</h3>
+        <p>Experience Esikai, an anime-inspired RPG where heroes 
+            explore dungeons, battle monsters, and collect treasures. 
+            Fast-paced combat, unique hero skills, and stunning visuals 
+            make every dungeon an epic adventure.</p>
+        </div>
+    </div>
+
+    <!-- Project 8 (Description Left + Video Right) -->
+    <div class="project reverse">
+        <video controls>
+        <source src="Video/WILD&FRESH.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <div class="project-desc">
+        <h3>WILD & FRESH - Premium Perfume Brand Website Demo</h3>
+        <p>
+          This demo video showcases the WILD & FRESH eCommerce website, a sleek and modern online store
+          built for a premium perfume brand in the Philippines. Watch how customers can seamlessly browse
+          collections, add items to cart, and checkout with ease—highlighting both the elegance of the brand and
+          the smooth functionality of the platform.
+        </p>
+        </div>
+    </div>
+  </section>
+
+    <section id="contact">
+        <div class="contact-container">
+
+            <!-- Left: Message Form -->
+            <div class="form-card1">
+                <div class="form-card2">
+
+                    <!-- EmailJS Form -->
+                    <form id="contactForm" class="form">
+                    <p class="form-heading">Get In Touch</p>
+
+                    <div class="form-field">
+                        <input required placeholder="Name" class="input-field" type="text" name="name" />
+                    </div>
+
+                    <div class="form-field">
+                        <input required placeholder="Email" class="input-field" type="email" name="email" />
+                    </div>
+
+                    <div class="form-field">
+                        <input required placeholder="Subject" class="input-field" type="text" name="subject" />
+                    </div>
+
+                    <div class="form-field">
+                        <textarea required placeholder="Message" cols="30" rows="3" class="input-field" name="message"></textarea>
+                    </div>
+
+                    <!-- From Uiverse.io by 00Kubi --> 
+                      <button class="button">
+                        <div class="outline"></div>
+                        <div class="state state--default">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              height="1.2em"
+                              width="1.2em"
+                            >
+                              <g style="filter: url(#shadow)">
+                                <path
+                                  fill="currentColor"
+                                  d="M14.2199 21.63C13.0399 21.63 11.3699 20.8 10.0499 16.83L9.32988 14.67L7.16988 13.95C3.20988 12.63 2.37988 10.96 2.37988 9.78001C2.37988 8.61001 3.20988 6.93001 7.16988 5.60001L15.6599 2.77001C17.7799 2.06001 19.5499 2.27001 20.6399 3.35001C21.7299 4.43001 21.9399 6.21001 21.2299 8.33001L18.3999 16.82C17.0699 20.8 15.3999 21.63 14.2199 21.63ZM7.63988 7.03001C4.85988 7.96001 3.86988 9.06001 3.86988 9.78001C3.86988 10.5 4.85988 11.6 7.63988 12.52L10.1599 13.36C10.3799 13.43 10.5599 13.61 10.6299 13.83L11.4699 16.35C12.3899 19.13 13.4999 20.12 14.2199 20.12C14.9399 20.12 16.0399 19.13 16.9699 16.35L19.7999 7.86001C20.3099 6.32001 20.2199 5.06001 19.5699 4.41001C18.9199 3.76001 17.6599 3.68001 16.1299 4.19001L7.63988 7.03001Z"
+                                ></path>
+                                <path
+                                  fill="currentColor"
+                                  d="M10.11 14.4C9.92005 14.4 9.73005 14.33 9.58005 14.18C9.29005 13.89 9.29005 13.41 9.58005 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z"
+                                ></path>
+                              </g>
+                              <defs>
+                                <filter id="shadow">
+                                  <fedropshadow
+                                    flood-opacity="0.6"
+                                    stdDeviation="0.8"
+                                    dy="1"
+                                    dx="0"
+                                  ></fedropshadow>
+                                </filter>
+                              </defs>
+                            </svg>
+                          </div>
+                          <p>
+                            <span style="--i:0">S</span>
+                            <span style="--i:1">e</span>
+                            <span style="--i:2">n</span>
+                            <span style="--i:3">d</span>
+                            <span style="--i:4"> </span>
+                            <span style="--i:5">M</span>
+                            <span style="--i:6">e</span>
+                            <span style="--i:7">s</span>
+                            <span style="--i:8">s</span>
+                            <span style="--i:9">a</span>
+                            <span style="--i:10">g</span>
+                            <span style="--i:11">e</span>
+                          </p>
+                        </div>
+                        <div class="state state--sent">
+                          <div class="icon">
+                            <svg
+                              stroke="black"
+                              stroke-width="0.5px"
+                              width="1.2em"
+                              height="1.2em"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g style="filter: url(#shadow)">
+                                <path
+                                  d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                                  fill="currentColor"
+                                ></path>
+                                <path
+                                  d="M10.5795 15.5801C10.3795 15.5801 10.1895 15.5001 10.0495 15.3601L7.21945 12.5301C6.92945 12.2401 6.92945 11.7601 7.21945 11.4701C7.50945 11.1801 7.98945 11.1801 8.27945 11.4701L10.5795 13.7701L15.7195 8.6301C16.0095 8.3401 16.4895 8.3401 16.7795 8.6301C17.0695 8.9201 17.0695 9.4001 16.7795 9.6901L11.1095 15.3601C10.9695 15.5001 10.7795 15.5801 10.5795 15.5801Z"
+                                  fill="currentColor"
+                                ></path>
+                              </g>
+                            </svg>
+                          </div>
+                          <p>
+                            <span style="--i:5">S</span>
+                            <span style="--i:6">e</span>
+                            <span style="--i:7">n</span>
+                            <span style="--i:8">t</span>
+                            <span style="--i:9">!</span>
+                          </p>
+                        </div>
+                      </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fa-solid fa-phone"></i> +63 994 878 4365</p>
+                <p><i class="fa-solid fa-envelope"></i> jclurizgeronimo@gmail.com</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i> Manila, Philippines</p>
+
+                <!-- From Uiverse.io by vikas7754 --> 
+                <div class="tooltip-container">
+                    <div class="tooltip">
+                        <div class="profile">
+                            <div class="user">
+                                <div class="img">Ui</div>
+                                <div class="details">
+                                <div class="name">User</div>
+                                <div class="username">@username</div>
+                            </div>
+                        <div class="about">500+ Connections</div>
+                    </div>
+                </div>
+                <div class="text">
+                    <a class="icon" href="https://www.linkedin.com/in/jc-luriz-geronimo-138b4a30b">
+                    <div class="layer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fab fa-linkedin">
+                        <svg viewBox="0 0 448 512" height="1em">
+                            <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            ></path>
+                        </svg>
+                        </span>
+                    </div>
+                    <div class="text">LinkedIn</div>
+                    </a>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+  <script src="page.js"></script>
+  <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Init EmailJS with your public key
+        emailjs.init("hPJCMCZPSbPLgVmhZ");
+
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_914so2g', 'template_8ntsai8', this)
+            .then(() => {
+                alert('Message sent successfully!');
+                form.reset();
+            })
+            .catch((err) => {
+                console.error('EmailJS error:', err);
+                alert('Oops! Something went wrong.');
+            });
+        });
+    </script>
+
+</body>
+</html>
