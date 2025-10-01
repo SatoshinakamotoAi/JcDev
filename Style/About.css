@@ -1,4 +1,23 @@
-/* About Section */
+/*  Theme Variables */
+:root {
+  --accent: #ffb300;
+  --accent-bg: rgba(255, 179, 0, 0.1);
+  --text-color: #e9eef6;
+  --sub-em: #a9d0ff;
+  --box-bg: rgba(255, 255, 255, 0.03);
+  --skill-text: #000;
+}
+
+body.light-mode {
+  --accent: #cc8b00;
+  --accent-bg: rgba(204, 139, 0, 0.08);
+  --text-color: #222;
+  --sub-em: #0066cc;
+  --box-bg: rgba(0, 0, 0, 0.03);
+  --skill-text: #fff;
+}
+
+/* ABOUT SECTION STYLES */
 #about {
   display: flex;
   flex-wrap: wrap;
@@ -20,23 +39,19 @@
 .desc-box,
 .skills-box {
   padding: 20px;
-  border: 2px solid #FFB300;
+  border: 2px solid var(--accent);
   border-radius: 10px;
-  background: rgba(255, 179, 0, 0.1);
+  background: var(--accent-bg);
   transition: 0.3s;
 }
 
 .profile-box {
   padding: 15px;
-  border: 2px solid #FFB300;
-  border-radius: 10px;
-  background: rgba(255, 179, 0, 0.1);
-  transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;   /* mas maliit na width */
-  height: 325px;  /* mas maliit na height */
+  width: 350px;
+  height: 325px;
   box-sizing: border-box;
 }
 
@@ -47,25 +62,29 @@
   border-radius: 10px;
 }
 
-
-.info-box p {
-  font-size: var(12);
-  line-height: var(3);
-  margin: var(--info-margin) 0;
-}
-
 .right-side {
   flex: 2;
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* spacing sa pagitan ng desc at skills box */
+  gap: 30px;
+}
+
+.desc-box {
+  max-width: 760px;
+  margin: 1.25rem auto;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 179, 0, 0.1);
+  border-radius: 12px;
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 .desc-box h2,
 .skills-box h2 {
-  color: #FFB300;
-  margin-bottom: 15px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  background: (255, 179, 0, 0.1);
 }
 
 .skills-list {
@@ -76,25 +95,53 @@
 
 .skill {
   padding: 10px 20px;
-  border: 2px solid #FFB300;
+  border: 2px solid var(--accent);
   border-radius: 20px;
-  background: #FFB300;
-  color: #000;
+  background: var(--accent);
+  color: var(--skill-text);
   font-weight: bold;
   transition: 0.3s;
 }
-
 .skill:hover {
-  background: #cc8b00;
+  filter: brightness(0.9);
   color: #fff;
 }
 
-/* Card Container */
+/* ⭐ Emphasis styles */
+.em {
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 0.08rem 0.28rem;
+  border-radius: 6px;
+}
+.em-weak {
+  font-weight: 600;
+  color: var(--sub-em);
+  padding: 0.04rem 0.22rem;
+  border-radius: 4px;
+}
+.em.pill {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--text-color);
+  font-size: 0.92em;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.12) inset;
+}
+.em:hover, .em:focus {
+  text-decoration: underline;
+}
+
+/* ================================
+   🎴 CARD STYLES (HIWALAY)
+   ================================ */
 .card {
   position: relative;
-  width: 220px;
-  height: 320px;
-  border-radius: 20px;
+  width: 345px;
+  height: 580px;
+  border-radius: 30px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -107,57 +154,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(315deg, #ffebbd, #FFB300);
-}
-.card::after {
-  filter: blur(30px);
-}
-
-/* Inner Dark Layer */
-.card b {
-  position: absolute;
-  inset: 6px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 14px;
-  z-index: 2;
-}
-
-/* Profile Image (Portrait Style) */
-.card img {
-  position: absolute;
-  z-index: 3;
-  width: 140px;
-  height: 180px;
-  border-radius: 10px;
-  object-fit: cover;
-  opacity: 0.85;
-  transition: 0.5s;
-}
-
-.card:hover img {
-  transform: translateY(-90px) scale(0.9);
-  opacity: 1;
-}
-
-/* Card Container */
-.card {
-  position: relative;
-  width: 360px;    /* mas malaki */
-  height: 580px;   /* mas mataas */
-  border-radius: 25px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Background Glow */
-.card::before,
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(315deg, #ffebbd, #FFB300);
+  background: linear-gradient(315deg, #ffebbd, var(--accent));
 }
 .card::after {
   filter: blur(50px);
@@ -172,26 +169,24 @@
   z-index: 2;
 }
 
-/* Profile Image - centered horizontally & vertically */
+/* Profile Image */
 .card img {
   position: absolute;
   z-index: 3;
-  width: 300px;      /* image width */
-  height: 320px;     /* image height */
+  width: 280px;
+  height: 320px;
   border-radius: 15px;
   object-fit: cover;
   opacity: 0.9;
   transition: 0.5s;
-  top: 45%;           /* vertical center */
-  left: 50%;          /* horizontal center */
-  transform: translate(-50%, -50%);  /* adjust both axes */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .card:hover img {
-  transform: translate(-50%, -60%) scale(0.95); /* centered & moves up on hover */
+  transform: translate(-50%, -60%) scale(0.95);
   opacity: 1;
 }
-
 
 /* Content */
 .card .content {
@@ -208,12 +203,9 @@
   transform: scale(1);
   bottom: 50px;
 }
-
-/* Title */
 .content .title {
   color: #fff;
   font-weight: 600;
-  line-height: 1.3em;
   font-size: 1.4em;
   text-align: center;
   margin-bottom: 18px;
@@ -221,10 +213,8 @@
 .content .title span {
   font-weight: 400;
   font-size: 1.15em;
-  color: #ffb300;
+  color: var(--accent);
 }
-
-/* Social Icons */
 .content .sci {
   display: flex;
   gap: 18px;
@@ -246,5 +236,5 @@
 }
 .sci li a:hover {
   color: #fff;
-  background: #ffb300;
+  background: var(--accent);
 }

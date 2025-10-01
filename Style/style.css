@@ -290,7 +290,6 @@ body.light-mode #typing {
   color: #ffb300;  /* yellow text */
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #ffb300; /* yellow cursor */
   animation: blink 0.7s infinite;
 }
 
@@ -708,3 +707,4 @@ body.light-mode .explore-btn {
     transform: scale(1);
   }
 }
+

@@ -48,8 +48,6 @@ document.getElementById("exploreBtn").addEventListener("click", function(e) {
   requestAnimationFrame(step);
 });
 
-
-
 // Typewriter for name
   const text = "Jc Developer";
   let i = 0;
